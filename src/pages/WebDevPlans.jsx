@@ -6,7 +6,7 @@ export default function WebDevPlans() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/webdev") 
+      .get("https://business-backend-ii0j.onrender.com/api/webdev") 
       .then((res) => setPlans(res.data))
       .catch((err) => console.log(err));
   }, []);
