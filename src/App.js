@@ -1,24 +1,39 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavbarComp from "./components/NavbarComp";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
-import Services from "./pages/Services";
-import Contact from "./pages/Contact";
-import FooterComp from "./components/FooterComp";
 import About from "./pages/About";
+import Services from "./pages/Services";
+import OfferBanner from "./pages/OfferBanner";
+import Contact from "./pages/Contact";
 import WebDevPlans from "./pages/WebDevPlans";
+import NavbarComp from "./components/NavbarComp";
+import FooterComp from "./components/FooterComp";
 
-export default function App() {
+function AppContent() {
+  const location = useLocation();
+
   return (
-    <BrowserRouter>
+    <>
+      {/* Show only on Home route */}
+      {location.pathname === "/" && <OfferBanner />}
+
       <NavbarComp />
+
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
         <Route path="/webdev" element={<WebDevPlans />} />
       </Routes>
       <FooterComp />
-    </BrowserRouter>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
   );
 }

@@ -13,12 +13,12 @@ export default function Services() {
       .catch((err) => console.log(err));
   }, []);
 
-  // Navigate to Web Development Plans page
+  
   const goToWebDev = () => {
-    navigate("/webdev"); // Your WebDev page must exist
+    navigate("/webdev");
   };
 
-  // Navigate to Contact Page for other services
+  
   const goToContact = () => {
     navigate("/contact");
   };
@@ -26,7 +26,7 @@ export default function Services() {
   return (
     <div className="page-background">
       <div className="container mt-4">
-        <h2 className="mb-4 fw-bold">Our Services</h2>
+        <h2 className="mb-4 fw-bold text-center">Our Services</h2>
 
         <div className="row">
           {services.map((s, i) => (
@@ -35,7 +35,6 @@ export default function Services() {
                 <h4 className="fw-bold">{s.title}</h4>
                 <p className="text-muted">{s.description}</p>
 
-                {/* CONDITION: If service title = Web Development */}
                 {s.title.toLowerCase() === "web development" ? (
                   <button
                     className="btn btn-primary w-100 mt-auto"

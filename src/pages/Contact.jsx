@@ -33,7 +33,7 @@ export default function Contact() {
   return (
     <div className="page-background">
       <div className="container mt-5">
-        <h2>Contact Us</h2>
+        <h2 className="mb-4 fw-bold text-center">Contact Us</h2>
 
         {status && <p className="alert alert-info mt-3">{status}</p>}
 

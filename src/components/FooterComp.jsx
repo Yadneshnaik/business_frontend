@@ -3,13 +3,16 @@ export default function FooterComp() {
 
   return (
     <footer
-      className="bg-light text-dark pt-3 pb-2 mt-5 w-100 footer-shadow"
-      style={{ zIndex: 1000 }}
+      className="bg-light text-dark pt-3 pb-2 w-100 footer-shadow"
+      style={{
+        position: "fixed",
+        bottom: 0,
+        left: 0,
+        zIndex: 1000,
+      }}
     >
       <div className="container text-center">
-        <p className="m-0">
-          © {year} Vista Developer. All Rights Reserved.
-        </p>
+        <p className="m-0">© {year} Vista Developer. All Rights Reserved.</p>
       </div>
     </footer>
   );
