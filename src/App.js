@@ -5,6 +5,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import FooterComp from "./components/FooterComp";
 import About from "./pages/About";
+import WebDevPlans from "./pages/WebDevPlans";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/webdev" element={<WebDevPlans />} />
       </Routes>
       <FooterComp />
     </BrowserRouter>

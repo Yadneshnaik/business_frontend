@@ -1,14 +1,15 @@
 export default function FooterComp() {
+  const year = new Date().getFullYear();
+
   return (
     <footer
-      className="bg-light text-dark pt-4 pb-2 mt-5 fixed-bottom w-100 footer-shadow"
+      className="bg-light text-dark pt-3 pb-2 mt-5 w-100 footer-shadow"
       style={{ zIndex: 1000 }}
     >
-      <div className="container">
-        <p className="text-center m-0">
-          © 2024 Infrenox Pvt Ltd. All Rights Reserved.
+      <div className="container text-center">
+        <p className="m-0">
+          © {year} Vista Developer. All Rights Reserved.
         </p>
-
       </div>
     </footer>
   );
